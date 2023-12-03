@@ -1,10 +1,34 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    letter-spacing: .0em;
+}
+body{
+    width: 100%;
 }
 
 .stan{
     max-width: 1172px;
     margin: 0 auto;
+}
+
+@media (max-width: 1172px){
+    .stan{
+        max-width: 920px;
+    }
+}
+@media (max-width: 1000px){
+    .stan{
+        max-width: 730px;
+    }
+}
+@media (max-width: 760px){
+    .stan{
+        max-width: 570px;
+    }
+}
+@media (max-width: 600px){
+    .stan{
+        max-width: 350px;
+    }
 }
