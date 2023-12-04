@@ -252,11 +252,11 @@ body {
     margin: 40px 0;
   }
   .features-block__btn-order {
-    width: 150px;
+    width: 130px;
     margin-right: 20px;
   }
   .features-block__btn-more {
-    width: 150px;
+    width: 130px;
   }
 }
 @media (max-width: 400px) {
@@ -270,13 +270,6 @@ body {
   }
   .features-block__item {
     margin: 25px 0;
-  }
-  .features-block__btn-order {
-    width: 130px;
-    margin-right: 20px;
-  }
-  .features-block__btn-more {
-    width: 130px;
   }
 }
 .offer {

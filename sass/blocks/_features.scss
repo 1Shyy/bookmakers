@@ -99,11 +99,11 @@
             }
             &__btn{
                 &-order{
-                    width: 150px;
+                    width: 130px;
                     margin-right: 20px;
                 }
                 &-more{
-                    width: 150px;
+                    width: 130px;
                 }
             }
         }
@@ -121,15 +121,7 @@
             &__item{
                 margin: 25px 0;
             }
-            &__btn{
-                &-order{
-                    width: 130px;
-                    margin-right: 20px;
-                }
-                &-more{
-                    width: 130px;
-                }
-            }
+            
         }
     }
 }
