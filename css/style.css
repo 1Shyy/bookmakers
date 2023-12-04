@@ -252,11 +252,11 @@ body {
     margin: 40px 0;
   }
   .features-block__btn-order {
-    width: 130px;
+    width: 120px;
     margin-right: 20px;
   }
   .features-block__btn-more {
-    width: 130px;
+    width: 120px;
   }
 }
 @media (max-width: 400px) {
