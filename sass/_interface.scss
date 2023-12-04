@@ -29,6 +29,11 @@ body{
 }
 @media (max-width: 600px){
     .stan{
-        max-width: 350px;
+        max-width: 450px;
+    }
+}
+@media (max-width: 480px){
+    .stan{
+        max-width: 300px;
     }
 }

@@ -92,6 +92,7 @@
         &-block{
             &__header{
                 font-size: 28px;
+                line-height: 35px;
             }
             &__item{
                 margin: 40px 0;
@@ -110,7 +111,7 @@
 }
 @media (max-width: 400px){
     .features{
-        height: 650px;
+        height: 550px;
         padding: 0 10px;
         &-block{
             &__header{

@@ -4,7 +4,7 @@
     background-color: #3D4050;
     display: flex;
     &-block{
-        max-width: 1172px;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -14,12 +14,14 @@
         font-size: 13px;
     }
     &__rights{
-        width: 346px;
+        width: 29.5%;
+        margin: auto;
     }
     &__wallet{
-        width: 474px;
+        width: 40.4%;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 38px;
         &-item{
             display: flex;
@@ -32,15 +34,88 @@
         border-right: 1px solid #C3C3C3;
     }
     &__connection{
-        width: 344px;
+        width: 29%;
         display: flex;
         justify-content: end;
         gap: 42px;
+        flex-wrap: wrap;
         &-item{
             display: flex;
             white-space: nowrap;
             gap: 10px;
             margin: auto 0;
+            
+        }
+        &-item a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+@media(max-width: 1172px) {
+    .footer__wallet{
+        gap: 25px;
+    }
+    .footer__connection{
+        gap: 20px;
+    }
+}
+@media (max-width:760px) {
+    .footer{
+        height: 110px;
+        &__wallet{
+            gap: 15px;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__connection{
+            gap: 0px;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .footer{
+        &__rights{
+            width: 31.5%;
+        }
+        &__wallet{
+            width: 36.4%;
+        }
+        &__connection{
+            width: 31%;
+            &-item{
+                gap: 4px;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .footer{
+        height: 210px;
+        &-block{
+            flex-direction: column;
+        }
+        &__rights{
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+        &__wallet{
+            width: 100%;
+            border-top: 1px solid #C3C3C3;
+            border-bottom: 1px solid #C3C3C3;
+            border-left: none;
+            border-right: none;
+            padding: 10px 0;
+        }
+        &__connection{
+            width: 100%;
+            padding: 10px 0;
+            align-items: center;
+            gap: 10px;
         }
     }
 }

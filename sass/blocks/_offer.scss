@@ -45,7 +45,7 @@
             &-item{
                 display: flex;
                 flex-direction: column;
-                width: 209px;
+                width: 18%;
                 font-size: 16px;
                 font-family: 'Lato-Regular', sans-serif;
                 text-align: center;
@@ -53,17 +53,21 @@
             }
             &-item div{
                 margin: 0 auto 20px;
-                width: 100px;
-                height: 100px;
+                width: 50%;
                 border-radius: 50%;
                 background-color: #3E9CDC;
                 border: 5px solid #286690;
             }
+            &-item div::after{
+                content: '';
+                display: block;
+                padding-top: 100%;
+            }
             &-item p{
-                width: 209px;
+                width: 100%;
             }
             &-icon1{
-                background: url('../img/icon/search.svg') center no-repeat;
+                background: url('../img/icon/search.svg')center no-repeat;
             }
             &-icon2{
                 background: url('../img/icon/percent.svg') center no-repeat;
@@ -86,7 +90,7 @@
                 justify-content: space-between;
             }
             &-input{
-                width: 370px;
+                width: 31%;
                 height: 48px;
                 border-radius: 3px;
                 border: 1px solid white;
@@ -116,10 +120,13 @@
                 font-size: 15px;
                 font-weight: 600;
             }
+            &-inputwrapper{
+                width: 65%;
+            }
             &-range{
                 margin-top: 21px;
                 -webkit-appearance: none;
-                width: 777px;
+                width: 100%;
                 height: 6px;
                 cursor: pointer;
                 accent-color: #FFFFFFB2;
@@ -144,7 +151,7 @@
             }
             &-button{
                 margin-top: 40px;
-                width: 370px;
+                width: 31%;
                 height: 48px;
                 border-radius: 4px;
                 background-color: #3E9CDC;
@@ -168,7 +175,7 @@
 }
 
 .container{
-    width: 370px;
+    width: 31%;
     height: 48px;
     border-radius: 3px;
     position: relative;
@@ -183,6 +190,9 @@
     font-size: 18px;
     color: white;
     }
+    input[type=checkbox] {
+        -moz-appearance:initial // Hack for Firefox Browsers
+      }
     .btn::before{
     content: 'Выберите тип системы';
     display: flex;
@@ -215,9 +225,8 @@
     transform: rotate(0deg);
     }
     .list{
-    z-index: 10;
     position: absolute;
-    width: 370px;
+    width: 100%;
     height: 175px;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     display: flex;
@@ -235,7 +244,6 @@
         
     }
     .list::-webkit-scrollbar-thumb {
-        z-index: 10;
         background-color: #42A9ED;  
         border-radius: 20px;       
         background-clip: content-box!important;
@@ -244,10 +252,10 @@
         background: #3D4050;
     }
     .list a{
-        
     height: 25%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    float: left;
     padding: 0.3em 0 0.3em 1em;
     text-decoration: none;
     background: #272733;
@@ -257,4 +265,132 @@
     }
     .list a:hover{
     color: #42A9ED;
+    }
+
+    @media (max-width: 1172px){
+        .offer{
+            &-container{
+                &__advantages{
+                    &-item div{
+                        width: 77px;
+                        height: 77px;
+                    }
+                    &-bcircle{
+                        margin-top: 40px;
+                        gap: 14px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1000px){
+        .offer{
+            &-container{
+                &__advantages{
+                    &-item{
+                        font-size: 13px;      
+                    }
+                    &-bcircle{
+                        margin-top: 38px;
+                        gap: 9px;
+                    }
+                }
+                &__form{
+                    &-input{
+                        font-size: 15px;
+                    }
+                    &-inputtext{
+                        font-size: 13px;
+                    }
+                    &-rangetext{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .btn{
+            font-size: 15px;
+        }
+        .list a{
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 760px){
+        .offer{
+            &-container{
+                &__advantages{
+                    
+                    &-item{
+                        word-wrap: break-word;
+                    }
+                    &-bcircle{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .btn{
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 600px){
+        .offer{
+            &-container{
+                &__advantages{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    &-item{
+                        word-wrap: break-word;
+                        width: 25%;
+
+                    }
+                    &-bcircle{
+                        display: none;
+                    }
+                }
+                &__form{
+                    &-input{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .btn{
+            font-size: 13px;
+        }
+    }
+    @media (max-width: 480px){
+        .offer{
+            padding-bottom: 1100px;
+            &-container{
+                margin-top: 40px;
+                &__advantages{
+                    margin-top: 40px;
+                }
+                &__form{
+                    margin-top: 40px;
+                    &-inputblock{
+                        flex-wrap: wrap;
+                        gap: 15px;
+                    }
+                    &-input{
+                        width: 100%;
+                    }
+                    &-inputrange{
+                        flex-wrap: wrap;
+                    }
+                    &-inputwrapper{
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                    &-button{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+        .container{
+            width: 100%;
+        }
+
     }
